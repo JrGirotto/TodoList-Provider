@@ -10,24 +10,20 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0),
-            child: Selector<AuthProvider, String>(
-              selector: (context, authProvider) =>
-                  authProvider.user?.displayName ?? 'Não informado',
-              builder: (_, value, __) {
-                return Text(
-                  'E ai, $value!',
-                  style: context.textTheme.headline5?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
+        child: Selector<AuthProvider, String>(
+          selector: (context, authProvider) =>
+              authProvider.user?.displayName ?? 'TodoList Lover',
+          builder: (_, value, __) {
+            return Text(
+              'E aí, $value!',
+              style: context.textTheme.headline5?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
