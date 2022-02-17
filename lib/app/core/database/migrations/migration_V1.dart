@@ -1,5 +1,4 @@
 // ignore: file_names
-// ignore: file_names
 import 'package:sqflite_common/sqlite_api.dart';
 import 'package:todo_list_provider/app/core/database/migrations/migration.dart';
 

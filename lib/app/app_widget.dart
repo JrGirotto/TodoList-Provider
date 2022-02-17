@@ -40,6 +40,7 @@ class _AppWidgetState extends State<AppWidget> {
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
       ],
       supportedLocales: [
         Locale('pt', 'BR'),

@@ -92,7 +92,7 @@ class UserRepositoryImpl implements UserRepository {
         if (loginMethods.contains('password')) {
           throw AuthException(
               message:
-                  'Você utilizou o email cadastrado no TodoList, caso tenha esquecido sua senha, por favor clique em Esqueceu sua senha');
+                  'Você utilizou o email cadastrado pelo TodoList, caso tenha esquecido sua senha, por favor clique em Esqueceu sua senha');
         } else {
           final googleAuth = await googleUser.authentication;
           final firebaseCredencial = GoogleAuthProvider.credential(

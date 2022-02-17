@@ -17,7 +17,9 @@ class DefaultListenerNotifier {
       EverVoidCallback? everCallback,
       ErrorVoidCallback? errorCallback}) {
     changeNotifier.addListener(() {
-      everCallback!(changeNotifier, this);
+      if(everCallback != null){
+       everCallback(changeNotifier, this);
+      }
       if (changeNotifier.loading) {
         Loader.show(context);
       } else {
